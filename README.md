@@ -6,3 +6,6 @@ Khum Restaurant is a term projects for subject 653262 FRONT-END WEB DEV FOUNDATI
 - Javascript
 - Pixies Dust
 - Caffeine
+## Collaborative
+1. Clone a project
+
