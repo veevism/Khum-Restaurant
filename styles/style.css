@@ -76,7 +76,7 @@ header .icons i:hover, header .icons a:hover {
     background: var(--green);
 }
 
-
+/* 
 @media (max-width:991px) {
     html {
         font-size: 55%;
@@ -106,3 +106,8 @@ header .icons i:hover, header .icons a:hover {
         font-size:  2rem;
     }
 }
+ */
+
+ .content-section {
+    
+ }
