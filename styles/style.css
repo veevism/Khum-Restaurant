@@ -1,4 +1,4 @@
-:root{
+ :root{
         --very-blue:#6096B4;
         --blue:#93BFCF;
         --gray:#BDCDD6;
@@ -106,8 +106,5 @@ header .icons i:hover, header .icons a:hover {
         font-size:  2rem;
     }
 }
- */
 
- .content-section {
-    
- }
+

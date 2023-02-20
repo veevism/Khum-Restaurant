@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khum Restaurant</title>
     <!-- link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <!-- icon -->
-    <link rel="icon" href="./assets/icon.jpg">
+    <link rel="icon" href="./assets/icon.jpg" />
     <!-- link script -->
     <script src="./scripts/script.js"></script>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d1d3917b49.js" crossorigin="anonymous"></script>
-</head>
-<body>
-   
-<header>
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <link rel="stylesheet" href="./styles/uuuii.css" />
+    <link rel="stylesheet" href="./styles/webwebstyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d1d3917b49.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- <div class="container" style="height: 100px;"></div> -->
+
+    <!-- <header>
     <a href="index.html" class="logo"><i class="fas fa-utensils"></i>Khum Restaurant</a>
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
@@ -26,13 +40,69 @@
         <a href="#" class="fas fa-heart"></a>
         <a href="#" class="fas fa-shopping-cart"></a>
     </div>
-</header> 
-
+</header>  -->
+    <!-- 
 <div class="container content-section">
     <h1>Welcome To Khum Restaurant</h1>
 </div>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d944.2447051250313!2d98.95119812900624!3d18.799097192192047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3b10dac5a59b%3A0xdca1d7492adbacc4!2z4Lio4Li54LiZ4Lii4LmM4Lit4Liy4Lir4Liy4Lij4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiK4Li14Lii4LiH4LmD4Lir4Lih4LmI!5e0!3m2!1sth!2sth!4v1676523070789!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d944.2447051250313!2d98.95119812900624!3d18.799097192192047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3b10dac5a59b%3A0xdca1d7492adbacc4!2z4Lio4Li54LiZ4Lii4LmM4Lit4Liy4Lir4Liy4Lij4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiK4Li14Lii4LiH4LmD4Lir4Lih4LmI!5e0!3m2!1sth!2sth!4v1676523070789!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 
+    <nav>
+      <div class="container">
+        <ul class="navbar-left">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <!--end navbar-left -->
 
-</body>
+        <ul class="navbar-right">
+          <li>
+            <a href="#" id="cart"
+              ><i class="fa fa-shopping-cart"></i> Cart
+              <span class="badge">3</span></a
+            >
+          </li>
+        </ul>
+        <!--end navbar-right -->
+      </div>
+      <!--end container -->
+    </nav>
+
+    <div class="container">
+      <div
+        class="shopping-cart"
+        style="position: absolute; right: 10%; top: 4%"
+      >
+        <div class="shopping-cart-header">
+          <i class="fa fa-shopping-cart cart-icon"></i
+          ><span class="badge">3</span>
+          <div class="shopping-cart-total">
+            <span class="lighter-text">Total:</span>
+            <span class="main-color-text">$0</span>
+          </div>
+        </div>
+        <a href=""></a>
+        <!--end shopping-cart-header -->
+        <ul class="shopping-cart-items">
+          <!-- <li class="clearfix">
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg"
+              alt="item1"
+              class="cart-img"
+            />
+            <span class="item-name">Sony DSC-RX100M III</span>
+            <span class="item-price">$849.99</span>
+            <span class="item-quantity">Quantity: 01</span>
+          </li> -->
+        </ul>
+
+        <a href="#" class="button">Checkout</a>
+        <a href="#" class="button">Clear</a>
+      </div>
+      <!--end shopping-cart -->
+    </div>
+    <!--end container -->
+
+    <div class="section-center"></div>
+  </body>
 </html>
