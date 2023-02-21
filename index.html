@@ -16,7 +16,8 @@
     <!-- icon -->
     <link rel="icon" href="./assets/icon.jpg" />
     <!-- link script -->
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script_index.js"></script>
+    <script src="./scripts/allmenu.js"></script>
     <!-- <link rel="stylesheet" href="./styles/style.css"> -->
     <link rel="stylesheet" href="./styles/uuuii.css" />
     <link rel="stylesheet" href="./styles/webwebstyle.css" />
@@ -59,7 +60,7 @@
           <li>
             <a href="#" id="cart"
               ><i class="fa fa-shopping-cart"></i> Cart
-              <span class="badge">3</span></a
+              <span class="badge">0</span></a
             >
           </li>
         </ul>
@@ -75,33 +76,19 @@
       >
         <div class="shopping-cart-header">
           <i class="fa fa-shopping-cart cart-icon"></i
-          ><span class="badge">3</span>
+          ><span class="badge">0</span>
           <div class="shopping-cart-total">
             <span class="lighter-text">Total:</span>
-            <span class="main-color-text">$0</span>
+            <span id="Total" class="main-color-text">$0</span>
           </div>
         </div>
         <a href=""></a>
-        <!--end shopping-cart-header -->
-        <ul class="shopping-cart-items">
-          <!-- <li class="clearfix">
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg"
-              alt="item1"
-              class="cart-img"
-            />
-            <span class="item-name">Sony DSC-RX100M III</span>
-            <span class="item-price">$849.99</span>
-            <span class="item-quantity">Quantity: 01</span>
-          </li> -->
-        </ul>
+        <ul class="shopping-cart-items"></ul>
 
-        <a href="#" class="button">Checkout</a>
-        <a href="#" class="button">Clear</a>
+        <a id="checkout-button" href="#" class="button">Checkout</a>
+        <a id="clear-button" href="#" class="button">Clear</a>
       </div>
-      <!--end shopping-cart -->
     </div>
-    <!--end container -->
 
     <div class="section-center"></div>
   </body>

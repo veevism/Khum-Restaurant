@@ -78,9 +78,15 @@ ul li a:hover {
     padding-bottom: 15px;
 }
 
+#clear-button {
+  text-decoration: none;
+  color:#F8F8F8;
+}
+
 .shopping-cart .shopping-cart-items {
     
     padding-top: 20px;
+    /* pointer-events: none; */
 }
 
 .shopping-cart .shopping-cart-items li {
@@ -92,6 +98,7 @@ ul li a:hover {
   margin-right: 12px;
   width: 20%;
   height: 40px;
+  z-index: 2000;
 }
 
 .shopping-cart .shopping-cart-items .item-name {
