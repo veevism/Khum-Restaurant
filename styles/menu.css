@@ -161,7 +161,6 @@ Menu
   text-transform: capitalize;
   margin: 0 0.5rem;
   letter-spacing: 1px;
-  border: solid 2px #c59d5f;
   border-radius: var(--radius);
   padding: 0.375rem 0.75rem;
   color: var(--clr-gold);
@@ -173,6 +172,7 @@ Menu
   color: var(--clr-white);
 }
 .section-center {
+  padding: 3rem 0;
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;

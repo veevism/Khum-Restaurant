@@ -5,13 +5,10 @@ $(document).ready(function () {
 
   const sectionCenter = document.querySelector(".section-center");
   const menuSector = document.querySelector(".shopping-cart-items");
-  const btnContainer = document.querySelector(".btn-container");
-
   var cartArray = [];
   var counter = 0;
 
   diplayMenuItems(menu);
-  displayMenuButtons();
 
   $(".section-center img").click(function (e) {
     var selectedfoodid = e.target.id;
@@ -130,46 +127,5 @@ $(document).ready(function () {
     displayMenu = displayMenu.join("");
 
     sectionCenter.innerHTML = displayMenu;
-  }
-
-  function displayMenuButtons() {
-    const categories = menu.reduce(
-      function (values, item) {
-        if (!values.includes(item.category)) {
-          values.push(item.category);
-        }
-        return values;
-      },
-      ["all"]
-    );
-    
-    const categoryBtns = categories.map(function (category) {
-        return `<button type="button" class="filter-btn" data-id=${category}>
-            ${category}
-          </button>`;
-      })
-      .join("");
-  
-    btnContainer.innerHTML = categoryBtns;
-    const filterBtns = btnContainer.querySelectorAll(".filter-btn");
-    console.log(filterBtns);
-  
-    filterBtns.forEach(function (btn) {
-      btn.addEventListener("click", function (e) {
-        // console.log(e.currentTarget.dataset);
-        const category = e.currentTarget.dataset.id;
-        const menuCategory = menu.filter(function (menuItem) {
-          // console.log(menuItem.category);
-          if (menuItem.category === category) {
-            return menuItem;
-          }
-        });
-        if (category === "all") {
-          diplayMenuItems(menu);
-        } else {
-          diplayMenuItems(menuCategory);
-        }
-      });
-    });
   }
 });
