@@ -79,7 +79,7 @@ $(document).ready(function () {
     menu.forEach((element) => {
       sum += element.quantity;
     });
-    $(".badge").text(sum);
+    $(".cart-badge").text(sum);
   }
 
   function resetTotal() {
