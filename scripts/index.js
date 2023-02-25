@@ -19,10 +19,12 @@ $(document).ready(function () {
     console.log("you came back");
     retrievedArray.forEach((element) => {
       console.log(element);
+      menu[element.id].quantity = element.quantity;
       displayCart(element, element.id, "");
-      resetBadge();
-      resetTotal();
+      // resetBadge();
+      // resetTotal();
     });
+
     // displayCart()
   }
 
