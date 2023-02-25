@@ -1,14 +1,17 @@
 $(document).ready(function () {
+  $(".shopping-cart").fadeOut();
   $("#cart").on("click", function () {
     $(".shopping-cart").fadeToggle("fast");
   });
 
   const sectionCenter = document.querySelector(".section-center");
+  const categorySector = document.querySelector("#input-select-group");
   const menuSector = document.querySelector(".shopping-cart-items");
   var cartArray = [];
   var counter = 0;
 
-  diplayMenuItems(menu);
+  displayCategoryButt(menu, categorySector);
+  displayMenuItems(menu, sectionCenter);
 
   $(".section-center img").click(function (e) {
     var selectedfoodid = e.target.id;
@@ -17,7 +20,7 @@ $(document).ready(function () {
     //if item never been in cart before
     if (selectedfood.quantity == 0) {
       selectedfood.quantity += 1;
-      generateCart(selectedfood, selectedfoodid, e);
+      displayCart(selectedfood, selectedfoodid, e);
 
       //if item already in cart
     } else if (selectedfood.quantity >= 1) {
@@ -53,6 +56,8 @@ $(document).ready(function () {
     clearButton();
     resetBadge();
   });
+
+  $("#inputGroupSelect04");
 
   function sendIndexToAdmin() {}
 
@@ -90,7 +95,7 @@ $(document).ready(function () {
     $("#Total").text("$" + sum.toFixed(2));
   }
 
-  function generateCart(selectedfood, selectedfoodid, e) {
+  function displayCart(selectedfood, selectedfoodid, e) {
     var hello = `<li class="clearfix" id="${selectedfood.title}">
       <img
         src="${selectedfood.img}"
@@ -109,7 +114,27 @@ $(document).ready(function () {
     resetTotal();
   }
 
-  function diplayMenuItems(menuItems) {
+  function displayCategoryButt(menuItems, destination) {
+    var categoryArray = [];
+    menu.forEach((element) => {
+      if (!categoryArray.includes(element.category)) {
+        categoryArray.push(element.category);
+      }
+      console.log(categoryArray);
+    });
+
+    let displayCate = categoryArray.map((item) => {
+      return `<option value=${item}>${
+        item.charAt(0).toUpperCase() + item.slice(1)
+      }</option>`;
+    });
+    displayCate = displayCate.join("");
+
+    destination.innerHTML =
+      displayCate + "<option selected='' value=all>All</option>";
+  }
+
+  function displayMenuItems(menuItems, destination) {
     let displayMenu = menuItems.map((item) => {
       return `<article class="menu-item" >
             <img id="${item.id}" src=${item.img} alt=${item.title} class="photo" />
@@ -126,6 +151,29 @@ $(document).ready(function () {
     });
     displayMenu = displayMenu.join("");
 
-    sectionCenter.innerHTML = displayMenu;
+    destination.innerHTML += displayMenu;
   }
+
+  $("#input-select-group").change(function () {
+    var val = $("#input-select-group option:selected").val();
+    console.log(val);
+
+    var wanttoremove = $(".section-center article");
+    wanttoremove.remove();
+
+    var newmenu = [];
+    menu.forEach((element) => {
+      if (element.category == val) {
+        newmenu.push(element);
+      }
+
+      if (val == "all") {
+        newmenu.push(element);
+      }
+    });
+    console.log(newmenu);
+    displayMenuItems(newmenu, sectionCenter);
+    // var newmenu = []
+    // menu.forEach(element =>)
+  });
 });
