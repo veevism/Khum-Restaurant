@@ -90,3 +90,27 @@ var menu = [
     quantity: 0,
   },
 ];
+
+function storageTranferSet(name, obj) {
+  localStorage.setItem(name, JSON.stringify(obj));
+}
+
+function setBackward(name, obj) {
+  storageTranferSet(name, obj);
+}
+//same
+
+function setBackward(name) {
+  storageTranferGet(name);
+}
+
+function storageTranferGet(name) {
+  localStorage.getItem(name);
+  return JSON.parse(localStorage.getItem(name));
+}
+
+// console.log(localStorage.getItem("Hello") + "Meow");
+
+// function setBackward(obj, name) {
+//   storageTranfer(obj, name);
+// }

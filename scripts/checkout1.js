@@ -54,7 +54,21 @@ $(document).ready(function () {
     }
     resetBadge();
     resetTotal();
+
+    storageTranferSet("backward", recievedMenu);
   });
+
+  // function storageTranfer(name, obj) {
+  //   localStorage.setItem(name, obj);
+  // }
+
+  // storageTranfer("Hello", recievedMenu);
+
+  // console.log(localStorage.getItem("Hello"));
+
+  // function setBackward(obj, name) {
+  //   storageTranfer(obj, name);
+  // }
 
   function displayCheckoutMenu(menuItems, destination) {
     let displayCheckMenu = recievedMenu.map((item) => {

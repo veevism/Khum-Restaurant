@@ -13,6 +13,19 @@ $(document).ready(function () {
   displayCategoryButt(menu, categorySector);
   displayMenuItems(menu, sectionCenter);
 
+  if (storageTranferGet("backward") != null) {
+    var retrievedArray = storageTranferGet("backward");
+
+    console.log("you came back");
+    retrievedArray.forEach((element) => {
+      console.log(element);
+      displayCart(element, element.id, "");
+      resetBadge();
+      resetTotal;
+    });
+    // displayCart()
+  }
+
   // $(".section-center img").click(function (e) {
   //   var selectedfoodid = e.target.id;
   //   var selectedfood = menu[selectedfoodid];
@@ -72,8 +85,9 @@ $(document).ready(function () {
     });
 
     // console.log(sendCartArray);
-    localStorage.setItem("sendcartArray", JSON.stringify(sendCartArray));
-    localStorage.setItem("test", "hello");
+    // localStorage.setItem("sendcartArray", JSON.stringify(sendCartArray));
+    // localStorage.setItem("test", "hello");
+    storageTranferSet("sendcartarray", JSON.stringify(sendCartArray));
   });
 
   // $("img").click(function (e) {
@@ -123,6 +137,25 @@ $(document).ready(function () {
     $("#Total").text("$" + sum.toFixed(2));
   }
 
+  // function displayCart(selectedfood, selectedfoodid, e) {
+  //   var hello = `<li class="clearfix" id="${selectedfood.title}">
+  //     <img
+  //       src="${selectedfood.img}"
+  //       alt="${selectedfood.title}"
+  //       class="cart-img"
+  //     />
+  //     <span class="item-name">${selectedfood.title}</span>
+  //     <span class="item-price">${selectedfood.price}</span>
+  //     <span class="item-quantity">Quantity: ${selectedfood.quantity}</span>
+  //   </li>`;
+  //   menuSector.innerHTML += hello;
+
+  //   cartArray[counter] = selectedfoodid;
+  //   counter++;
+  //   resetBadge();
+  //   resetTotal();
+  // }
+
   function displayCart(selectedfood, selectedfoodid, e) {
     var hello = `<li class="clearfix" id="${selectedfood.title}">
       <img
@@ -148,7 +181,6 @@ $(document).ready(function () {
       if (!categoryArray.includes(element.category)) {
         categoryArray.push(element.category);
       }
-      console.log(categoryArray);
     });
 
     let displayCate = categoryArray.map((item) => {
