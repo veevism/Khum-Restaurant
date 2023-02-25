@@ -21,7 +21,7 @@ $(document).ready(function () {
       console.log(element);
       displayCart(element, element.id, "");
       resetBadge();
-      resetTotal;
+      resetTotal();
     });
     // displayCart()
   }
