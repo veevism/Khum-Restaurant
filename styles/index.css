@@ -42,7 +42,7 @@
   padding-bottom: 15px;
 }
 
-#clear-button {
+#clear-button ,#checkout-button {
   text-decoration: none;
   color: #f8f8f8;
 }
