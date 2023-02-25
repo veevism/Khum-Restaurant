@@ -71,6 +71,16 @@ html {
   font-size: 1.2rem;
 }
 
+.btn-outline-success:hover {
+  background-color: #14A44D!important;
+  color: white!important;
+}
+
+.modal-content {
+  border: solid 25px #27ae60!important;
+}
+
+
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }

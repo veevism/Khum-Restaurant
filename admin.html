@@ -14,10 +14,10 @@
       crossorigin="anonymous"
     />
     <!-- icon -->
-    <link rel="icon" href="./assets/icon.jpg">
+    <!-- <link rel="icon" href="./assets/icon.jpg"> -->
     <!-- link script -->
     <script src="./scripts/script.js"></script>
-    <script type="text/javascript" src="./scripts/mdb.min.js"></script>
+    
     <link rel="stylesheet" href="./styles/checkout.css" />
     <link rel="stylesheet" href="./styles/mdb.min.css" />
     <link
@@ -30,20 +30,17 @@
     ></script>
   </head>
   <body>
-    
     <div class="container-md my-5">
       <div class="pt-5 mb-4">
         <h6 class="mb-0">
-          <a
-            href="./index.html"
-            class="text-body text-decoration-none"
+          <a href="./index.html" class="text-body text-decoration-none"
             ><i class="fas fa-long-arrow-alt-left me-2"></i>Dashboard</a
           >
         </h6>
       </div>
       <div class="shadow-4 rounded-7 table-responsive">
         <table class="table align-middle mb-0 bg-white">
-          <thead class="bg-light">
+          <thead class="bg-success text-white">
             <tr>
               <th>Id</th>
               <th>Name</th>
@@ -71,14 +68,89 @@
                 </div>
               </td>
               <td>
-                <div class="dropdown">
-                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Buttermilk Pancakes x2</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Total: <span>$ 20.99</span></a></li>
-                  </ul>
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn btn-outline-success dropdown-toggle"
+                  data-mdb-toggle="modal"
+                  data-mdb-target="#exampleModal"
+                ></button>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header border-bottom-0">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-mdb-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body text-start text-black p-4">
+                        <h5
+                          class="modal-title text-uppercase"
+                          id="exampleModalLabel"
+                        >
+                          SORAWEE SRIPHAKDEEPHONGDEJ
+                        </h5>
+                        <p class="text-secondary mb-4">098-593-8108</p>
+                        <h4 class="mb-4" style="color: #27ae60">
+                          Thanks for your order
+                        </h4>
+                        <p class="mb-0" style="color: #27ae60">
+                          Payment summary
+                        </p>
+                        <hr
+                          class="mt-2 mb-4"
+                          style="
+                            height: 0;
+                            background-color: transparent;
+                            opacity: 0.75;
+                            border-top: 2px dashed #9e9e9e;
+                          "
+                        />
+
+                        <div class="d-flex justify-content-between">
+                          <p class="fw-bold mb-0">Dildo🍆(Qty:1)</p>
+                          <p class="text-muted mb-0">$50.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <p class="small mb-0">Shipping</p>
+                          <p class="small mb-0">$5.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between pb-1">
+                          <p class="small">Tax</p>
+                          <p class="small">$200.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <p class="fw-bold">Total</p>
+                          <p class="fw-bold" style="color: #27ae60">$255.00</p>
+                        </div>
+                      </div>
+                      <div
+                        class="modal-footer d-flex justify-content-center border-top-0 py-4"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-lg mb-1"
+                          style="background-color: #27ae60"
+                        >
+                          Track your order
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </td>
               <td>
@@ -108,14 +180,89 @@
                 </div>
               </td>
               <td>
-                <div class="dropdown">
-                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Buttermilk Pancakes x2</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Total: <span>$ 20.99</span></a></li>
-                  </ul>
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn btn-outline-success dropdown-toggle"
+                  data-mdb-toggle="modal"
+                  data-mdb-target="#exampleModal"
+                ></button>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header border-bottom-0">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-mdb-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body text-start text-black p-4">
+                        <h5
+                          class="modal-title text-uppercase"
+                          id="exampleModalLabel"
+                        >
+                          SORAWEE SRIPHAKDEEPHONGDEJ
+                        </h5>
+                        <p class="text-secondary mb-4">098-593-8108</p>
+                        <h4 class="mb-4" style="color: #27ae60">
+                          Thanks for your order
+                        </h4>
+                        <p class="mb-0" style="color: #27ae60">
+                          Payment summary
+                        </p>
+                        <hr
+                          class="mt-2 mb-4"
+                          style="
+                            height: 0;
+                            background-color: transparent;
+                            opacity: 0.75;
+                            border-top: 2px dashed #9e9e9e;
+                          "
+                        />
+
+                        <div class="d-flex justify-content-between">
+                          <p class="fw-bold mb-0">Dildo🍆(Qty:1)</p>
+                          <p class="text-muted mb-0">$50.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <p class="small mb-0">Shipping</p>
+                          <p class="small mb-0">$5.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between pb-1">
+                          <p class="small">Tax</p>
+                          <p class="small">$200.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <p class="fw-bold">Total</p>
+                          <p class="fw-bold" style="color: #27ae60">$255.00</p>
+                        </div>
+                      </div>
+                      <div
+                        class="modal-footer d-flex justify-content-center border-top-0 py-4"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-lg mb-1"
+                          style="background-color: #27ae60"
+                        >
+                          Track your order
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </td>
               <td>
@@ -149,14 +296,89 @@
                 </div>
               </td>
               <td>
-                <div class="dropdown">
-                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Buttermilk Pancakes x2</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Total: <span>$ 20.99</span></a></li>
-                  </ul>
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn btn-outline-success dropdown-toggle"
+                  data-mdb-toggle="modal"
+                  data-mdb-target="#exampleModal"
+                ></button>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header border-bottom-0">
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-mdb-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body text-start text-black p-4">
+                        <h5
+                          class="modal-title text-uppercase"
+                          id="exampleModalLabel"
+                        >
+                          SORAWEE SRIPHAKDEEPHONGDEJ
+                        </h5>
+                        <p class="text-secondary mb-4">098-593-8108</p>
+                        <h4 class="mb-4" style="color: #27ae60">
+                          Thanks for your order
+                        </h4>
+                        <p class="mb-0" style="color: #27ae60">
+                          Payment summary
+                        </p>
+                        <hr
+                          class="mt-2 mb-4"
+                          style="
+                            height: 0;
+                            background-color: transparent;
+                            opacity: 0.75;
+                            border-top: 2px dashed #9e9e9e;
+                          "
+                        />
+
+                        <div class="d-flex justify-content-between">
+                          <p class="fw-bold mb-0">Dildo🍆(Qty:1)</p>
+                          <p class="text-muted mb-0">$50.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <p class="small mb-0">Shipping</p>
+                          <p class="small mb-0">$5.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between pb-1">
+                          <p class="small">Tax</p>
+                          <p class="small">$200.00</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          <p class="fw-bold">Total</p>
+                          <p class="fw-bold" style="color: #27ae60">$255.00</p>
+                        </div>
+                      </div>
+                      <div
+                        class="modal-footer d-flex justify-content-center border-top-0 py-4"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-lg mb-1"
+                          style="background-color: #27ae60"
+                        >
+                          Track your order
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </td>
               <td>
@@ -182,5 +404,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="./scripts/mdb.min.js"></script>
   </body>
 </html>
