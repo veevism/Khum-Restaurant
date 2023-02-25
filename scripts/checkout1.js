@@ -1,6 +1,6 @@
 $(document).ready(function () {
   console.log();
-  const recievedMenu = JSON.parse(localStorage.getItem("sendcartArray"));
+  const recievedMenu = JSON.parse(sessionStorage.getItem("sendcartArray"));
 
   resetBadge();
   resetTotal();
