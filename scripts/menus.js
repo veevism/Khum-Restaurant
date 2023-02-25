@@ -92,7 +92,7 @@ var menu = [
 ];
 
 function storageTranferSet(name, obj) {
-  localStorage.setItem(name, JSON.stringify(obj));
+  sessionStorage.setItem(name, JSON.stringify(obj));
 }
 
 function setBackward(name, obj) {
@@ -105,8 +105,8 @@ function setBackward(name) {
 }
 
 function storageTranferGet(name) {
-  localStorage.getItem(name);
-  return JSON.parse(localStorage.getItem(name));
+  sessionStorage.getItem(name);
+  return JSON.parse(sessionStorage.getItem(name));
 }
 
 // console.log(localStorage.getItem("Hello") + "Meow");
