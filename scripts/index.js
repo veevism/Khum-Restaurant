@@ -89,7 +89,8 @@ $(document).ready(function () {
     // console.log(sendCartArray);
     // localStorage.setItem("sendcartArray", JSON.stringify(sendCartArray));
     // localStorage.setItem("test", "hello");
-    storageTranferSet("sendcartarray", JSON.stringify(sendCartArray));
+    // storageTranferSet("sendcartarray", JSON.stringify(sendCartArray));
+    storageTranferSet("forward", sendCartArray);
   });
 
   // $("img").click(function (e) {

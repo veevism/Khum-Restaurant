@@ -2,13 +2,11 @@ $(document).ready(function () {
   console.log();
 
   var checkArray = [];
-  const recievedMenu = JSON.parse(localStorage.getItem("sendcartArray"));
+  const recievedMenu = storageTranferGet("forward");
 
   recievedMenu.forEach((element, i) => {
     checkArray[element.id] = i;
   });
-
-  console.log(checkArray);
 
   resetBadge();
   resetTotal();
