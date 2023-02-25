@@ -13,7 +13,32 @@ $(document).ready(function () {
   displayCategoryButt(menu, categorySector);
   displayMenuItems(menu, sectionCenter);
 
-  $(".section-center img").click(function (e) {
+  // $(".section-center img").click(function (e) {
+  //   var selectedfoodid = e.target.id;
+  //   var selectedfood = menu[selectedfoodid];
+
+  //   //if item never been in cart before
+  //   if (selectedfood.quantity == 0) {
+  //     selectedfood.quantity += 1;
+  //     displayCart(selectedfood, selectedfoodid, e);
+
+  //     //if item already in cart
+  //   } else if (selectedfood.quantity >= 1) {
+  //     selectedfood.quantity += 1;
+
+  //     for (let i = 0; i < cartArray.length; i++) {
+  //       if (selectedfoodid == cartArray[i]) {
+  //         document.querySelectorAll(".shopping-cart-items li")[
+  //           i
+  //         ].children[3].innerHTML = "Quantity: " + selectedfood.quantity;
+  //       }
+  //     }
+  //     resetBadge();
+  //     resetTotal();
+  //   }
+  // });
+
+  $(".section-center").on("click", "img", function (e) {
     var selectedfoodid = e.target.id;
     var selectedfood = menu[selectedfoodid];
 
