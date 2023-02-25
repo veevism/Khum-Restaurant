@@ -70,7 +70,10 @@ $(document).ready(function () {
         sendCartArray.push(element);
       }
     });
-    console.log(sendCartArray);
+
+    // console.log(sendCartArray);
+    localStorage.setItem("sendcartArray", JSON.stringify(sendCartArray));
+    localStorage.setItem("test", "hello");
   });
 
   // $("img").click(function (e) {
