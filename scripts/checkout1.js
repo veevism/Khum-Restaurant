@@ -1,6 +1,14 @@
 $(document).ready(function () {
   console.log();
-  const recievedMenu = JSON.parse(sessionStorage.getItem("sendcartArray"));
+
+  var checkArray = [];
+  const recievedMenu = JSON.parse(localStorage.getItem("sendcartArray"));
+
+  recievedMenu.forEach((element, i) => {
+    checkArray[element.id] = i;
+  });
+
+  console.log(checkArray);
 
   resetBadge();
   resetTotal();
@@ -23,7 +31,6 @@ $(document).ready(function () {
     recievedMenu.forEach((element) => {
       sum += element.quantity * element.price;
     });
-    console.log(sum);
     resetSuperTotal(sum);
     $("#Total").text("$" + sum.toFixed(2));
   }
@@ -36,8 +43,7 @@ $(document).ready(function () {
 
   $("button").on("click", function () {
     var checkoutfoodid = this.parentNode.parentNode.children[0].children[0].id;
-
-    var checkoutfood = recievedMenu[checkoutfoodid];
+    var checkoutfood = recievedMenu[checkArray[checkoutfoodid]];
 
     if (this.children[0].className == "fas fa-plus") {
       checkoutfood.quantity += 1;
@@ -46,8 +52,6 @@ $(document).ready(function () {
         checkoutfood.quantity -= 1;
       }
     }
-
-    console.log(recievedMenu);
     resetBadge();
     resetTotal();
   });

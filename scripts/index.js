@@ -72,8 +72,8 @@ $(document).ready(function () {
     });
 
     // console.log(sendCartArray);
-    sessionStorage.setItem("sendcartArray", JSON.stringify(sendCartArray));
-    sessionStorage.setItem("test", "hello");
+    localStorage.setItem("sendcartArray", JSON.stringify(sendCartArray));
+    localStorage.setItem("test", "hello");
   });
 
   // $("img").click(function (e) {
