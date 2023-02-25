@@ -100,10 +100,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="fas fa-bell"></i>
-              <span class="badge rounded-pill badge-notification bg-danger"
-                >1</span
-              >
+              <i class="fa-solid fa-clock-rotate-left"></i>
             </a>
             <ul
               class="dropdown-menu dropdown-menu-end text-small shadow"
@@ -115,6 +112,12 @@
                   <span class="badge rounded-pill badge-notification bg-warning"
                     >1</span
                   ></a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="./order_details.html"
+                  >Order details</a
                 >
               </li>
             </ul>
@@ -172,16 +175,19 @@
         </div>
 
         <div class="col-lg-6 pt-3" style="text-align: center">
-          <div class="input-group" style="width: 50%; height: 100%; margin: 0 auto;">
-            <select class="custom-select form-control" id="input-select-group" >
+          <div
+            class="input-group"
+            style="width: 50%; height: 100%; margin: 0 auto"
+          >
+            <select class="custom-select form-control" id="input-select-group">
               <!-- <option value="breakfast">breakfast</option>
               <option value="lunch">lunch</option>
               <option value="shakes">shakes</option>
               <option value="dinner">diner</option> -->
               <option selected="" value="all">All</option>
             </select>
-
           </div>
+        </div>
       </div>
     </div>
 
