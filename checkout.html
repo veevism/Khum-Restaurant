@@ -16,7 +16,8 @@
     <!-- icon -->
     <link rel="icon" href="./assets/icon.jpg" />
     <!-- link script -->
-    <script src="./scripts/script.js"></script>
+    <!-- <script src="./scripts/index.js"></script> -->
+    <script src="./scripts/menus.js"></script>
     <link rel="stylesheet" href="./styles/checkout.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
@@ -164,19 +165,23 @@
               <div class="card-body p-0">
                 <div class="row g-0">
                   <div class="col-lg-8">
-                    <div class="p-5">
+                    <div class="p-5" id="container1">
                       <div
+                        id="container2"
                         class="cart-top d-flex justify-content-between align-items-center mb-5"
                       >
                         <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
                         <!-- <h6 class="mb-0 text-muted">3 items</h6> -->
                         <h4>
-                          <span class="badge bg-success rounded-pill">3</span>
+                          <span class="badge bg-success rounded-pill badge-item"
+                            >0</span
+                          >
                         </h4>
                       </div>
                       <hr class="my-4" />
-                      <!-- Item start -->
-                      <div
+                      <div class="my-4" id="container3">
+                        <!-- Item start -->
+                        <!-- <div
                         class="item row mb-4 d-flex justify-content-between align-items-center"
                       >
                         <div class="col-md-2 col-lg-2 col-xl-2">
@@ -223,116 +228,12 @@
                           ></a>
                         </div>
                       </div>
-                      <hr class="my-4" />
+                      <hr class="my-4" /> -->
 
-                      <!-- Item end -->
+                        <!-- Item end -->
 
-                      <!-- Item start -->
-                      <div
-                        class="item row mb-4 d-flex justify-content-between align-items-center"
-                      >
-                        <div class="col-md-2 col-lg-2 col-xl-2">
-                          <img
-                            src="./images/item-1.jpeg"
-                            class="img-fluid rounded-3"
-                            alt="Cotton T-shirt"
-                          />
-                        </div>
-                        <div class="col-md-3 col-lg-3 col-xl-3">
-                          <h6 class="text-muted">Breakfast</h6>
-                          <h6 class="text-black mb-0">Buttermilk Pancakes</h6>
-                        </div>
-                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                          <button
-                            class="btn btn-link px-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                          >
-                            <i class="fas fa-minus"></i>
-                          </button>
-
-                          <input
-                            id="form1"
-                            min="0"
-                            name="quantity"
-                            value="1"
-                            type="number"
-                            class="form-control form-control-sm text-md-center"
-                          />
-
-                          <button
-                            class="btn btn-link px-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                          >
-                            <i class="fas fa-plus"></i>
-                          </button>
-                        </div>
-                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                          <h6 class="mb-0">$ 15.99</h6>
-                        </div>
-                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                          <a href="#!" class="text-muted"
-                            ><i class="fas fa-times"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <hr class="my-4" />
-
-                      <!-- Item end -->
-
-                      <!-- Item start -->
-                      <div
-                        class="item row mb-4 d-flex justify-content-between align-items-center"
-                      >
-                        <div class="col-md-2 col-lg-2 col-xl-2">
-                          <img
-                            src="./images/item-2.jpeg"
-                            class="img-fluid rounded-3"
-                            alt="Cotton T-shirt"
-                          />
-                        </div>
-                        <div class="col-md-3 col-lg-3 col-xl-3">
-                          <h6 class="text-muted">Lunch</h6>
-                          <h6 class="text-black mb-0">Diner Double</h6>
-                        </div>
-                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                          <button
-                            class="btn btn-link px-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                          >
-                            <i class="fas fa-minus"></i>
-                          </button>
-
-                          <input
-                            id="form1"
-                            min="0"
-                            name="quantity"
-                            value="1"
-                            type="number"
-                            class="form-control form-control-sm text-md-center"
-                          />
-
-                          <button
-                            class="btn btn-link px-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                          >
-                            <i class="fas fa-plus"></i>
-                          </button>
-                        </div>
-                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                          <h6 class="mb-0">$ 13.99</h6>
-                        </div>
-                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                          <a href="#!" class="text-muted"
-                            ><i class="fas fa-times"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <!-- Item end -->
-
-                      <hr class="my-4" />
-
-                      <!-- Item start -->
-                      <div
+                        <!-- Item start -->
+                        <!-- <div
                         class="item row mb-4 d-flex justify-content-between align-items-center"
                       >
                         <div class="col-md-2 col-lg-2 col-xl-2">
@@ -379,10 +280,9 @@
                           ></a>
                         </div>
                       </div>
-                      <!-- Item end -->
-
-                      <hr class="my-4" />
-
+                      <hr class="my-4" /> -->
+                        <!-- Item end -->
+                      </div>
                       <div class="pt-5">
                         <h6 class="mb-0">
                           <a
@@ -403,16 +303,22 @@
                       <div class="d-flex justify-content-between mb-4">
                         <h5 class="text-uppercase">
                           items
-                          <span class="badge bg-success rounded-pill">3</span>
+                          <span class="badge bg-success rounded-pill badge-item"
+                            >0</span
+                          >
                         </h5>
-                        <h5>$ 36.97</h5>
+                        <h5 id="Total">$ 0</h5>
                       </div>
 
                       <h5 class="text-uppercase mb-3">Shipping</h5>
 
                       <div class="mb-4 pb-2">
                         <select class="select">
-                          <option value="1">Standard-Delivery- $2.00</option>
+                          <option value="1">
+                            Standard-Delivery- $<span id="standard-deli"
+                              >2.00</span
+                            >
+                          </option>
                           <!-- <option value="2">Two</option>
                           <option value="3">Three</option>
                           <option value="4">Four</option> -->
@@ -438,7 +344,7 @@
 
                       <div class="d-flex justify-content-between">
                         <h5 class="text-uppercase">Total price</h5>
-                        <h5>$ 41.97</h5>
+                        <h5 id="supertotal">$ 0</h5>
                       </div>
 
                       <hr class="my-4" />
@@ -597,5 +503,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/checkout1.js"></script>
+    <script src="./scripts/checkout2.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const menu = [
+var menu = [
   {
     id: 0,
     title: "buttermilk pancakes",
