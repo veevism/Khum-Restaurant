@@ -3,10 +3,12 @@ $(document).ready(function () {
 
   var checkArray = [];
   const recievedMenu = storageTranferGet("forward");
+  storageTranferSet("backward", recievedMenu);
 
   recievedMenu.forEach((element, i) => {
     checkArray[element.id] = i;
   });
+  console.log(checkArray);
 
   resetBadge();
   resetTotal();
@@ -42,6 +44,8 @@ $(document).ready(function () {
   $("button").on("click", function () {
     var checkoutfoodid = this.parentNode.parentNode.children[0].children[0].id;
     var checkoutfood = recievedMenu[checkArray[checkoutfoodid]];
+
+    console.log(checkoutfood, checkoutfoodid);
 
     if (this.children[0].className == "fas fa-plus") {
       checkoutfood.quantity += 1;

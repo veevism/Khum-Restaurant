@@ -78,13 +78,17 @@ $(document).ready(function () {
     }
   });
 
-  $("#checkout-button").click(function () {
+  $("#checkout-button").click(function (e) {
     var sendCartArray = [];
     menu.forEach((element) => {
       if (element.quantity > 0) {
         sendCartArray.push(element);
       }
     });
+    if (cartArray == 0) {
+      e.preventDefault();
+      alert("Your cart can not be empty!");
+    }
 
     // console.log(sendCartArray);
     // localStorage.setItem("sendcartArray", JSON.stringify(sendCartArray));
