@@ -16,7 +16,7 @@ $(document).ready(function () {
   if (storageTranferGet("backward") != null) {
     var retrievedArray = storageTranferGet("backward");
 
-    console.log("you came back");
+    console.log("you was used regression lv.3");
     retrievedArray.forEach((element) => {
       console.log(element);
       menu[element.id].quantity = element.quantity;

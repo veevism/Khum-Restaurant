@@ -56,17 +56,39 @@ $(document).ready(function () {
     storageTranferSet("backward", recievedMenu);
   });
 
-  // function storageTranfer(name, obj) {
-  //   localStorage.setItem(name, obj);
-  // }
+  function checkquantity0fromlist() {
+    // for (let i = recievedMenu.length - 1; i > 0; i--) {
+    //   console.log(recievedMenu[i].quantity);
 
-  // storageTranfer("Hello", recievedMenu);
+    //   if (recievedMenu[i].quantity == 0) {
+    //     console.log(recievedMenu[i]);
+    //   }
+    // }
+    for (let i = 0; i < recievedMenu.length; i++) {
+      if (recievedMenu[i].quantity == 0) {
+        // console.log(recievedMenu[i]);
+        delete recievedMenu[i];
+        break;
+        console.log("H");
+      }
+    }
+    console.log("s");
+    recreateArray(recievedMenu);
+  }
 
-  // console.log(localStorage.getItem("Hello"));
+  function recreateArray(recievedMenu) {
+    var newarr = [];
+    recievedMenu.forEach((element) => {
+      if (element != null) {
+        newarr.push(element);
+      }
+    });
 
-  // function setBackward(obj, name) {
-  //   storageTranfer(obj, name);
-  // }
+    console.log(newarr);
+    recievedMenu = newarr;
+    console.log(recievedMenu);
+    console.log(checkArray);
+  }
 
   function displayCheckoutMenu(menuItems, destination) {
     let displayCheckMenu = recievedMenu.map((item) => {
@@ -114,14 +136,26 @@ $(document).ready(function () {
       </div>
       <div class="col-md-1 col-lg-1 col-xl-1 text-end">
         <a href="#!" class="text-muted"
-          ><i class="fas fa-times"></i
+          ><i class="fas fa-times regression"></i
         ></a>
       </div>
+      <hr class="my-4" />
     </div>
-    <hr class="my-4" />`;
+    `;
     });
     displayCheckMenu = displayCheckMenu.join("");
 
     destination.outerHTML = displayCheckMenu;
   }
+
+  $(".regression").click(function () {
+    var exid = this.parentNode.parentNode.parentNode.children[0].children[0].id;
+    this.parentNode.parentNode.parentNode.remove();
+    var targetmenu = recievedMenu[checkArray[exid]];
+    targetmenu.quantity = 0;
+
+    // checkquantity0fromlist();
+    resetBadge();
+    resetTotal();
+  });
 });
