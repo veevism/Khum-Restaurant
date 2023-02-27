@@ -35,7 +35,9 @@ $(document).ready(function () {
     // displayCart()
   }
 
-  // $(".section-center img").click(function (e) {
+  $(".section-center").click(function (e) {
+    $(".shopping-cart").fadeOut();
+  });
   //   var selectedfoodid = e.target.id;
   //   var selectedfood = menu[selectedfoodid];
 
@@ -115,7 +117,7 @@ $(document).ready(function () {
 
   $("#inputGroupSelect04");
 
-  function sendIndexToAdmin() { }
+  function sendIndexToAdmin() {}
 
   function clearButton() {
     for (let i = 0; i < cartArray.length; i++) {
@@ -198,8 +200,9 @@ $(document).ready(function () {
     });
 
     let displayCate = categoryArray.map((item) => {
-      return `<option value=${item}>${item.charAt(0).toUpperCase() + item.slice(1)
-        }</option>`;
+      return `<option value=${item}>${
+        item.charAt(0).toUpperCase() + item.slice(1)
+      }</option>`;
     });
     displayCate = displayCate.join("");
 
@@ -249,4 +252,58 @@ $(document).ready(function () {
     // var newmenu = []
     // menu.forEach(element =>)
   });
+
+  // function clickmeDaddy() {
+  //   var input, filter, ul, li, a, i, txtValue;
+  //   input = document.querySelector("#input-search-bar");
+  //   filter = input.value.toUpperCase();
+  //   console.log(filter);
+  //   // ul = document.getElementById("myUL");
+  //   // li = ul.getElementsByTagName("li");
+  //   // for (i = 0; i < li.length; i++) {
+  //   //     a = li[i].getElementsByTagName("a")[0];
+  //   //     txtValue = a.textContent || a.innerText;
+  //   //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+  //   //         li[i].style.display = "";
+  //   //     } else {
+  //   //         li[i].style.display = "none";
+  //   //     }
+  //   // }
+  // }
 });
+function clickmeDaddy() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.querySelector("#input-search-bar");
+  filter = input.value.toUpperCase();
+  console.log(filter);
+  console.log();
+
+  arc = document.querySelectorAll(".section-center article");
+
+  for (let i = 0; i < arc.length; i++) {
+    // console.log(arc[i]);
+
+    txtValue = arc[i].children[1].children[0].children[0].innerHTML;
+    // console.log((arc[i].style.display = "none"));
+
+    // console.log(txtValue.toUpperCase().indexOf(filter));
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      arc[i].style.display = "";
+    } else {
+      arc[i].style.display = "none";
+    }
+  }
+
+  // console.log("hello", document.querySelector("#input-search-bar").value);
+  // ul = document.getElementById("myUL");
+  // li = ul.getElementsByTagName("li");
+  // for (i = 0; i < li.length; i++) {
+  //     a = li[i].getElementsByTagName("a")[0];
+  //     txtValue = a.textContent || a.innerText;
+  //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+  //         li[i].style.display = "";
+  //     } else {
+  //         li[i].style.display = "none";
+  //     }
+  // }
+}
