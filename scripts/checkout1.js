@@ -8,7 +8,7 @@ $(document).ready(function () {
   recievedMenu.forEach((element, i) => {
     checkArray[element.id] = i;
   });
-  console.log(checkArray);
+  // console.log(checkArray);
 
   resetBadge();
   resetTotal();
@@ -41,11 +41,12 @@ $(document).ready(function () {
     $("#supertotal").text("$" + (sum + 2).toFixed(2));
   }
 
-  $("button").on("click", function () {
+  $(".btn-link").on("click", function () {
     var checkoutfoodid = this.parentNode.parentNode.children[0].children[0].id;
     var checkoutfood = recievedMenu[checkArray[checkoutfoodid]];
 
-    console.log(checkoutfood, checkoutfoodid);
+    console.log(checkoutfoodid);
+    console.log(recievedMenu);
 
     if (this.children[0].className == "fas fa-plus") {
       checkoutfood.quantity += 1;
@@ -76,22 +77,8 @@ $(document).ready(function () {
         console.log("H");
       }
     }
-    console.log("s");
-    recreateArray(recievedMenu);
-  }
-
-  function recreateArray(recievedMenu) {
-    var newarr = [];
-    recievedMenu.forEach((element) => {
-      if (element != null) {
-        newarr.push(element);
-      }
-    });
-
-    console.log(newarr);
-    recievedMenu = newarr;
-    console.log(recievedMenu);
-    console.log(checkArray);
+    // console.log("s");
+    // recreateArray(recievedMenu);
   }
 
   function displayCheckoutMenu(menuItems, destination) {
@@ -154,11 +141,16 @@ $(document).ready(function () {
 
   $(".regression").click(function () {
     var exid = this.parentNode.parentNode.parentNode.children[0].children[0].id;
-    this.parentNode.parentNode.parentNode.remove();
-    var targetmenu = recievedMenu[checkArray[exid]];
-    targetmenu.quantity = 0;
 
-    // checkquantity0fromlist();
+    // recievedMenu[exid] = null;
+    delete recievedMenu[checkArray[exid]];
+    delete checkArray[exid];
+
+    // console.log(recievedMenu);
+    // console.log(checkArray);
+    storageTranferSet("backward", recievedMenu);
+    this.parentNode.parentNode.parentNode.remove();
+
     resetBadge();
     resetTotal();
   });

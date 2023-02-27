@@ -17,12 +17,16 @@ $(document).ready(function () {
     var retrievedArray = storageTranferGet("backward");
 
     console.log("you was used regression lv.3");
-    retrievedArray.forEach((element) => {
+    console.log(retrievedArray);
+    retrievedArray.forEach((element, i) => {
       console.log(element);
-      menu[element.id].quantity = element.quantity;
-      displayCart(element, element.id, "");
-      // resetBadge();
-      // resetTotal();
+      if (retrievedArray[i] != null) {
+        console.log("OMG");
+        menu[element.id].quantity = element.quantity;
+        displayCart(element, element.id, "");
+        resetBadge();
+        resetTotal();
+      }
     });
 
     // displayCart()
@@ -85,7 +89,7 @@ $(document).ready(function () {
         sendCartArray.push(element);
       }
     });
-    if (cartArray == 0) {
+    if (sendCartArray == 0) {
       e.preventDefault();
       alert("Your cart can not be empty!");
     }

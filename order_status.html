@@ -16,7 +16,11 @@
     <!-- icon -->
     <link rel="icon" href="./assets/icon.jpg" />
     <!-- link script -->
-    <script src="./scripts/script.js"></script>
+    <!-- <script src="./scripts/menu.js"></script> -->
+    <script src="./scripts/menus.js"></script>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- <link rel="stylesheet" href="./styles/menu.css" /> -->
+    <link rel="stylesheet" href="./styles/checkout.css" />
     <link rel="stylesheet" href="./styles/order_status.css" />
     <link rel="stylesheet" href="./styles/mdb.min.css" />
     <link
@@ -29,6 +33,124 @@
     ></script>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-md-5">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a
+            class="logo navbar-nav me-auto mb-lg-0 mt-lg-0 mt-md-2 text-decoration-none"
+            href="./index.html"
+          >
+            Khum Restaurant
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./admin_login.html">Back-end</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center justify-content-center">
+          <!-- Icon -->
+          <a
+            href="#"
+            id="cart"
+            class="link-secondary text-decoration-none me-3"
+          >
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+            <span
+              class="badge rounded-pill badge-notification bg-success cart-badge"
+            ></span>
+          </a>
+          <!-- <a class="link-secondary me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a> -->
+
+          <!-- Notifications -->
+          <div class="dropdown">
+            <a
+              class="link-secondary me-3 hidden-arrow text-decoration-none"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end text-small shadow"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Your order is in queue
+                  <span class="badge rounded-pill badge-notification bg-warning"
+                    >1</span
+                  ></a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="./order_status.html"
+                  >Order details</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Avatar -->
+          <div class="flex-shrink-0 dropdown">
+            <a
+              href="#"
+              class="d-block link-secondary text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="./assets/icon.jpg"
+                alt="mdo"
+                width="32"
+                height="32"
+                class="rounded-circle profile"
+              />
+            </a>
+            <ul class="dropdown-menu text-small shadow">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">History</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="./login.html">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right elements -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
     <section class="h-100" style="background-color: #eee">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -133,20 +255,20 @@
         var classes = $(this).attr("class").split(" ");
         $(".line" + classes[1]).toggleClass("active"); // add class to line
         if ($(".-fa-utensils").hasClass("active-fixed")) {
-          $(".lead").text("Waiting for confirmation")
-          $(".sub-lead").text("Processing...")
+          $(".lead").text("Waiting for confirmation");
+          $(".sub-lead").text("Processing...");
         }
         if ($(".-fa-bowl-food").hasClass("active")) {
-          $(".lead").text("Preparing order")
-          $(".sub-lead").text("5 sec until arrival (approx.)")
+          $(".lead").text("Preparing order");
+          $(".sub-lead").text("5 sec until arrival (approx.)");
         }
         if ($(".-fa-motorcycle").hasClass("active")) {
-          $(".lead").text("On the way")
-          $(".sub-lead").text("5 sec until arrival (approx.)")
+          $(".lead").text("On the way");
+          $(".sub-lead").text("5 sec until arrival (approx.)");
         }
         if ($(".-fa-location-dot").hasClass("active")) {
-          $(".lead").text("Arrived at the destination")
-          $(".sub-lead").text("Thank you")
+          $(".lead").text("Arrived at the destination");
+          $(".sub-lead").text("Thank you");
         }
       });
     </script>
