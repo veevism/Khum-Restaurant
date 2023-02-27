@@ -112,7 +112,8 @@ $(document).ready(function () {
           name="quantity"
           value="${item.quantity}"
           type="number"
-          class="form-control form-control-sm text-md-center"
+          class="form-control form-control-sm text-md-center input-number"
+          readonly
         />
   
         <button
