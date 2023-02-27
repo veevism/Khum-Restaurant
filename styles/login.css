@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
+/* Only for login */
+
 :root {
   --very-blue: #6096b4;
   --blue: #93bfcf;

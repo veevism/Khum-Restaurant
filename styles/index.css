@@ -1,11 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+/* Use for navbar and toggle shopping cart */
+
+:root {
+  --very-blue: #6096b4;
+  --blue: #93bfcf;
+  --gray: #bdcdd6;
+  --vanilla: #eee9da;
+
+  --green: #27ae60;
+  --black: #192a56;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
 }
 
 .lighter-text {
@@ -16,22 +34,45 @@
   color: #27ae60;
 }
 
-/* .badge {
-    background-color: #27ae60;
-    border-radius: 10px;
-    color: white;
-    display: inline-block;
-    font-size: 12px;
-    line-height: 1;
-    padding: 3px 7px;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-} */
-
 .bg-success {
   background-color: #27ae60 !important;
 }
+
+.logo {
+  color: var(--green);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: rgb(0, 200, 0);
+  font-size: 1.5rem;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-menu.show {
+  position: absolute;
+  inset: 0px 0px auto auto;
+  margin: 0px;
+  transform: translate3d(0px, 34.4px, 0px);
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: #27ae60!important;
+}
+
+.profile {
+  border: solid 2px black;
+}
+
 
 .shopping-cart .shopping-cart-header .shopping-cart-total {
   float: right;
@@ -84,7 +125,9 @@
   float: right;
   background: white;
   width: 320px;
-  position: relative;
+  position: absolute;
+  right: 12%;
+  top: 5%;
   border-radius: 3px;
   padding: 20px;
 }
@@ -122,6 +165,11 @@
   margin: 25px 0 15px 0;
 }
 
+.btn-success {
+  background-color: #27ae60!important;
+  border: none;
+}
+
 .button:hover {
   background: lighten(#6394f8, 3%);
 }
@@ -131,3 +179,13 @@
   display: table;
   clear: both;
 }
+
+.right {
+  width: auto;
+}
+
+/* @media (max-width: 444.98px) {
+  .right {
+    margin-left: 6.25rem;
+  }
+} */

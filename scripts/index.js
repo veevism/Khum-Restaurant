@@ -1,6 +1,9 @@
 $(document).ready(function () {
   $(".shopping-cart").fadeOut();
   $("#cart").on("click", function () {
+    if ($(".collapse").hasClass("show")) {
+      $(".shopping-cart").css("top", "33%");
+    }
     $(".shopping-cart").fadeToggle("fast");
   });
 
@@ -112,7 +115,7 @@ $(document).ready(function () {
 
   $("#inputGroupSelect04");
 
-  function sendIndexToAdmin() {}
+  function sendIndexToAdmin() { }
 
   function clearButton() {
     for (let i = 0; i < cartArray.length; i++) {
@@ -195,9 +198,8 @@ $(document).ready(function () {
     });
 
     let displayCate = categoryArray.map((item) => {
-      return `<option value=${item}>${
-        item.charAt(0).toUpperCase() + item.slice(1)
-      }</option>`;
+      return `<option value=${item}>${item.charAt(0).toUpperCase() + item.slice(1)
+        }</option>`;
     });
     displayCate = displayCate.join("");
 

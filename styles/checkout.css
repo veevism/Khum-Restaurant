@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
+/* Use for checkout */
+
 :root {
   --very-blue: #6096b4;
   --blue: #93bfcf;
@@ -32,65 +34,27 @@ html {
   scroll-behavior: smooth;
 }
 
-.logo {
-  color: var(--green);
-  font-size: 1.5rem;
-  font-weight: bolder;
-  text-decoration: none;
-}
-
-.logo:hover {
-  color: rgb(0, 200, 0);
-  font-size: 1.5rem;
-}
-
-.dropdown-toggle {
-  outline: 0;
-}
-
-.text-small {
-  font-size: 85%;
-}
-
-.dropdown-menu.show {
-  position: absolute;
-  inset: 0px 0px auto auto;
-  margin: 0px;
-  transform: translate3d(0px, 34.4px, 0px);
-}
-
-.dropdown-menu {
-  --bs-dropdown-link-active-bg: #27ae60!important;
-}
-
-.profile {
-  border: solid 2px black;
-}
-
 .btn {
   font-size: 1.2rem;
 }
 
 .btn-outline-success:hover {
-  background-color: #14A44D!important;
-  color: white!important;
+  background-color: #14a44d !important;
+  color: white !important;
 }
 
 .modal-content {
-  border: solid 25px #27ae60!important;
+  border: solid 25px #27ae60 !important;
 }
 
-
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
 @media (max-width: 444.98px) {
   .cart-top {
-    /* display: block!important; */
-    margin-bottom: 1rem!important;
+    margin-bottom: 1rem !important;
   }
-  
 }
 
 @media (max-width: 767.98px) {

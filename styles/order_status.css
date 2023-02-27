@@ -47,7 +47,8 @@
   -webkit-font-smoothing: auto !important;
 }
 
-.card-dividerText.active, .active-fixed {
+.card-dividerText.active,
+.active-fixed {
   color: #27ae60;
 }
 
@@ -55,8 +56,13 @@
   background-color: #27ae60;
 }
 
+.text-body {
+  --mdb-text-opacity: 1;
+  color: rgba(79, 79, 79, 1) !important;
+}
+
 @media (max-width: 767.98px) {
   .card-body {
-    padding: 18px!important;
+    padding: 18px !important;
   }
 }
