@@ -19,12 +19,9 @@ $(document).ready(function () {
   if (storageTranferGet("backward") != null) {
     var retrievedArray = storageTranferGet("backward");
 
-    console.log("you was used regression lv.3");
-    console.log(retrievedArray);
     retrievedArray.forEach((element, i) => {
       console.log(element);
       if (retrievedArray[i] != null) {
-        console.log("OMG");
         menu[element.id].quantity = element.quantity;
         displayCart(element, element.id, "");
         resetBadge();
