@@ -33,7 +33,7 @@ $(document).ready(function () {
   }
 
   $(".section-center").click(function (e) {
-    $(".shopping-cart").fadeOut();
+    // $(".shopping-cart").fadeOut();
   });
   //   var selectedfoodid = e.target.id;
   //   var selectedfood = menu[selectedfoodid];
