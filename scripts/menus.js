@@ -107,6 +107,15 @@ var menu = [
     desc: `Decadent Boston cream pie with layers of fluffy sponge cake, silky vanilla custard, and rich chocolate glaze.`,
     quantity: 0,
   },
+  {
+    id: 11,
+    title: "boston cream pie",
+    category: "desert",
+    price: 5.54,
+    img: "./images/item-12.jpg",
+    desc: `Decadent Boston cream pie with layers of fluffy sponge cake, silky vanilla custard, and rich chocolate glaze.`,
+    quantity: 0,
+  },
 ];
 
 function storageTranferSet(name, obj) {
